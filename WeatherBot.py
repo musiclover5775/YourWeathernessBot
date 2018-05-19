@@ -59,5 +59,9 @@ updater.dispatcher.add_handler(request_handler)
 wrong_request_handler = MessageHandler(Filters.all, proceed_wrong_request)
 updater.dispatcher.add_handler(wrong_request_handler) 
 
+def main():
+	updater.start_polling()
+	
+if __name__ == '__main__': 
+	main()
 
-updater.start_polling()

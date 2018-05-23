@@ -8,7 +8,7 @@ import pymorphy2
 ya_weather_api_key = 'fb278b91-e9a0-4ec3-a8be-1c631e52f395'
 google_geocoder_key = 'AIzaSyBKsepsxGEwETPARwZ1YvuNTyLoOfKO3vM'
 url_orfography = 'https://speller.yandex.net/services/spellservice.json/checkText?text={word}'
-bing_key = '5747899ec809442286eb263ab253052c'
+bing_key = 'c958282f5bbb4f4ba855bc29dd29e664'
 
 day_signs = {'сегодня' : 0, 'сейчас' : 0,  'завтра' : 1, 'послезавтра' : 2, 'послепослезавтра' : 3 }
 weekdays_long = {'понедельник' : 0, 'вторник' : 2, 'среда' : 2, 'четверг' : 3, 'пятница' : 4, 'суббота' : 5, 'воскресение' : 6}
@@ -84,6 +84,9 @@ def words_in_normal_form(message):
 	maybe_words = re.split('[\s.,:;!@#?$%]+', txt)
 	words = []
 	for maybe_word in maybe_words:
+		if maybe_word in weekdays:
+			words.append(maybe_word)
+			continue
 		corrected_word = correction_of_misspells(maybe_word)
 		if corrected_word is not None and ((len(corrected_word) > 2 or corrected_word in weekdays_short) or re.match('[\d]+', corrected_word)):
 			words.append(corrected_word)

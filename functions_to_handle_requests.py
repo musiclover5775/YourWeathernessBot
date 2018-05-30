@@ -8,7 +8,7 @@ import pymorphy2
 ya_weather_api_key = 'fb278b91-e9a0-4ec3-a8be-1c631e52f395'
 google_geocoder_key = 'AIzaSyBKsepsxGEwETPARwZ1YvuNTyLoOfKO3vM'
 url_orfography = 'https://speller.yandex.net/services/spellservice.json/checkText?text={word}'
-bing_key = 'c958282f5bbb4f4ba855bc29dd29e664'
+bing_key = 'f020b1b1ee8d40c585b6ea7ab0870f0e'
 
 day_signs = {'сегодня' : 0, 'сейчас' : 0,  'завтра' : 1, 'послезавтра' : 2, 'послепослезавтра' : 3 }
 weekdays_long = {'понедельник' : 0, 'вторник' : 1, 'среда' : 2, 'четверг' : 3, 'пятница' : 4, 'суббота' : 5, 'воскресение' : 6}

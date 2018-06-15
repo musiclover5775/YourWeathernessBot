@@ -47,7 +47,7 @@ def proceed_wrong_request(bot, update):
 	bot.sendPhoto(chat_id = update.message.chat_id, photo = 'http://img1.joyreactor.cc/pics/comment/Игры-Life-is-Strange-Max-Caulfield-Chloe-Price-2108175.jpeg')
 
 
-updater = Updater(token='513351366:AAFoIx5GK4d4v0bINX70JRUgT_6DxrYF64c')
+updater = Updater(token='insert_bot_token')
 
 start_handler = CommandHandler('start', start)
 updater.dispatcher.add_handler(start_handler) 
